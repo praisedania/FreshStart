@@ -20,14 +20,14 @@ function testing(){
 let answer = 2
 console.log(answer, globalVariable)
 };
-testing();
+//testing();
 
 // function expression
 let funExpression= function(){
 console.log("working")
 };
 
-funExpression();
+//funExpression();
 
 //invoking a function before declaring it
 trial();
@@ -49,22 +49,22 @@ function favouriteFood(name,food){
 console.log(`${name} favorite food is ${food}`)
 };
 
-favouriteFood("praise","Friedrice");
-favouriteFood("Janet","Eba");
-favouriteFood("afeye","beans");
+//favouriteFood("praise","Friedrice");
+//favouriteFood("Janet","Eba");
+//favouriteFood("afeye","beans");
 
 //default parameters
 
 function funcFood( name = "praise",food="rice"){
 console.log(`${name} favorite food is ${food}`)
 };
-funcFood();
+//funcFood();
 
 //return keyword
 function passCode(code){
 return `successful ${code}`
 }
-console.log(passCode(1))
+//console.log(passCode(1))
 
 let login = function(password){
 if (password==="t123"){
@@ -79,35 +79,35 @@ console.log(result);
 function colours(...colours){
 console.log(colours[1])
 };
-colours("red","green","black","yellow");
+//colours("red","green","black","yellow");
 
 //arrow function
 const arrowFunc=()=>{
  console.log(2+2)
 };
-arrowFunc();
+//arrowFunc();
 
 
 const arrowFunc1=(a,b)=>{
  console.log(a+b)
 };
-arrowFunc1(1,1);
+//arrowFunc1(1,1);
 
 const arrowFunc2=string=>{
  console.log(`hey ${string}`)
 };
-arrowFunc2("there");
+//arrowFunc2("there");
 
 const arrowFunc3=()=>"hey" ;
 
-console.log(arrowFunc3())
+//console.log(arrowFunc3())
 
 
 //setTimeout
 function timeOutTest(firstName){
   console.log(`my name is ${firstName}`)
 };
-setTimeout(timeOutTest,3000,"praise D");
+//setTimeout(timeOutTest,3000,"praise D");
 
 /*setInterval
 function intervalTest(firstName){
@@ -124,9 +124,61 @@ function callback() {
   console.log('printing something new!');
 }
 
-myFunction(callback);
+//myFunction(callback);
 
- 
+const multiple = 2
+function multiplicationTable(input){
+let 
+};
 
+//IIFEs(Immediatlely Invoked function in js)
+
+(function(){
+  var name = "praise"
+  console.log(name)
+})();
+
+var name = "praise";
+console.log(name);
+
+
+// Argument object in js
+
+//Scope & Function stack in js
+
+// function stack - Recursion
+
+
+// function stack - Lexical scoping
+function stack(){
+  let x = 3
+  console.log(x)
   
+  function stack2(){
+let y = 2
+console.log(x+y)
+  }
+  stack2()
+};
+
+stack();
+
+//function stack - Closures
+
+let crust = "Crust";
+
+function earth (){
+  let mantle = "Mantle";
+
+  function message (){
+    let core = "Core"
+    console.log(`The Earth is made of the ${crust}, the ${mantle} and the ${core} `)
+  };
+  return message;
+
+};
+
+let msg = earth();
+msg();
+
 
